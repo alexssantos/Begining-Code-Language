@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<!-- TABELAS (aula)
+Tag:
+  [table]
+  [tr] Linha - inicia uma nova linha na tabela
+  [th] título
+  [td] conteúdo
+  [colgroup] grupo de colunas formatadas individualmente
+
+Atributos:
+  [colspain] ocupa 'n' colunas
+  [rowspain] ocuap 'n' linhas
+
+CSS
+  Representação de Classes no CSS [.nomedaclasse {atributos:parâmetros}]
+  Podemos formatar a tabela pelas 'class' da TAG [colgroup]
+-->
+
+
+<html lang="pt-br">
+  <head>
+    <title> Tabelas </title>
+    <meta charset="utf-8">
+
+    <!-- CSS
+    todo 'tributo CSS termina em ';'   -->
+    <style>
+      /*bordas da tabela*/
+      table, th, td {border:1px solid #000;}
+      /*espaçamento interno*/
+      th, td {padding: 7px;}
+      /*Classes no CSS*/
+      .nome {background-color: red;}
+      .email{background-color: green;}
+      .telefone {background-color: blue;}
+      .cargo {background-color: yellow;}
+
+    </style>
+
+  </head>
+
+  <body>
+    <h1> Tabelas </h1>
+
+    <table>
+      <caption> Cadastro de Clientes </caption>
+
+      <colgroup>
+        <!-- formatação da primeira COLUNA da tabela -->
+        <col class="nome">
+        <!-- formatação da SEGUNDA coluna da tabela -->
+        <col class="email">
+        <!-- Formatação da TERCEIRA coluna da tabela -->
+        <col class="telefone">
+        
+        <col class="cargo">
+      </colgroup>
+
+
+      <!-- Primeiro Coluna -->
+      <!-- Titulos -->
+      <tr>
+        <th> Nome: </th>
+        <th> Email: </th>
+        <th> Telefone: </th>
+        <th> Cargo: </th>
+      </tr>
+
+      <!-- Segunda Coluna -->
+      <!-- Dados  -->
+      <tr>
+        <td>Alex Arkanjo </td>
+        <td>Arkanjo......@gmail.com </td>
+        <td> (21) 99999-0000 </td>
+        <td rowspan="2"> Developer </td>
+      </tr>
+
+      <!--Terceira Coluna -->
+      <!-- Dados  -->
+      <tr>
+        <td>Alex Arkanjo </td>
+        <td>Arkanjo......@gmail.com </td>
+        <td> (21) 99999-0000 </td>
+      </tr>
+
+      <tr>
+        <td colspan="4"> Total: 2 </td>
+      <tr>
+
+
+  </body>
+
+</html>
